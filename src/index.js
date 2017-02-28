@@ -7,7 +7,7 @@
   var r = {};
   
   // add 
-  r.addTwo = (a,b) => {
+  r.addTwo = function(a,b)  {
    return a + b
   }
 
