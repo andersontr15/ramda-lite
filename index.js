@@ -10,6 +10,20 @@
   r.addTwo = (a,b) => {
    return a + b
   }
+
+  //adjust 
+  r.adjust = function(fn, pos, list) {
+   var result = [];
+   for(var i = 0; i < list.length; i++) {
+    if(i === pos) {
+     result.push(fn(list[i]))
+    }
+    else {
+     result.push(list[i])
+    }
+   }
+   return result;
+  }
   
   // all
   r.all = function(list, predicate) {
@@ -62,6 +76,48 @@
   // apply 
   r.apply = function(fn, list) {
     return fn.apply(null, list)
+  }
+
+  //both 
+  r.both = function(fn1, fn2) {
+   return function(val) {
+    return fn1(val) && fn2(val)
+   }
+  }
+
+  //binary 
+  r.binary = function(fn) {
+   return function() {
+    return fn(arguments[0], arguments[1])
+   }
+  }
+
+  //bind 
+  r.bind = function(fn, context) {
+   return function() {
+    return fn.apply(context, arguments)
+   }
+  }
+
+  //complement 
+  r.complement = function() {
+   return function(val) {
+    return val === null;
+   }
+  }
+
+  //compose 
+  r.compose = function() {
+   var args = Array.from(arguments);
+   var result;
+   var functions = args.slice(0, args.length - 1);
+   return function(val) {
+     var result = val;
+     for(var i = 0; i < functions.length; i++) {
+      result += functions[i](result)
+    }
+    return result;
+   }
   }
 
   // contains 
@@ -119,6 +175,17 @@
     return false;
   }
 
+  //filter 
+  r.filter = function(list, fn) {
+   var result = [];
+   for(var i = 0; i < list.length; i++) {
+    if(fn(list[i]) === true) {
+     result.push(list[i])
+    }
+   }
+   return result;
+  }
+
   //flip arguments order 
   r.flip = function() {
     var order = Array.from(arguments).reverse();
@@ -149,9 +216,75 @@
     return a >= b 
   }
 
+  //has 
+  r.has = function(obj, prop) {
+   return obj.hasOwnProperty(prop)
+  }
+
+  //hasIn 
+  r.hasIn = function(obj, prop) {
+   return prop in obj 
+  }
+
   //identity
   r.identity = function(val) {
     return val;
+  }
+
+  //ifElse
+  r.ifElse = function(predicate, ifCondition, elseCondition) {
+   return function(val) {
+    if(predicate === true) {
+     return ifCondition(val)
+    }
+    else {
+     return elseCondition(val)
+    }
+   }
+  } 
+
+  //inc 
+  r.inc = function(val) {
+   return val + 1
+  }
+
+  //init 
+  r.init = function(val) {
+   return val.slice(1)
+  }
+
+  //is 
+  r.is = function(val, ctor) {
+   return val.constructor === ctor 
+  }
+
+  //isEmpty
+  r.isEmpty = function(val) {
+   if(val === undefined || val === null) {
+    return false;
+   }
+   else {
+    return val.length === 0
+   }
+  }
+
+  //it 
+  r.it = function(a,b) {
+   return a < b
+  }
+
+  //juxt 
+  r.juxt = function() {
+   var result = [];
+   var fns = Array.from(arguments);
+   return function(list) {
+    for(var i = 0; i < fns.length; i++) {
+     for(var j = 0; j < list.length; j++) {
+      result.push(fns[i](list[j]))
+     }
+    }
+    return result;
+   }
   }
 
   //keys 
@@ -163,9 +296,19 @@
     return result;
   }
 
+  //length 
+  r.length = function(list) {
+   return list.length 
+  }
+
   //last 
   r.last = function(list) {
     return list[list.length - 1];
+  }
+
+  //lte 
+  r.lte = function(val1, val2) {
+   return val1 <= val2 
   }
 
   //map 
@@ -175,6 +318,17 @@
       result.push(fn(list[i]))
     }
     return result;
+  }
+
+  //max 
+  r.max = function(list) {
+   var max = list[0];
+   for(var i = 0; i < list.length; i++) {
+    if(list[i] > max) {
+     max = list[i]
+    }
+   }
+   return max;
   }
 
   //memoize 
@@ -191,9 +345,57 @@
     }
   }
 
+  //min 
+  r.min = function(list) {
+   var min = list[0];
+   for(var i = 0; i < list.length; i++) {
+    if(list[i] < min) {
+     min = list[i]
+    }
+   }
+   return min;
+  }
+
   //multiply 
   r.multiply = function(a,b) {
     return a * b
+  }
+
+  //negate 
+  r.negate = function(v) {
+   return -(v)
+  }
+
+  //none 
+  r.none = function(fn, list) {
+   for(var i = 0; i < list.length; i++) {
+    if(fn(list[i]) === true) {
+     return false;
+    }
+   }
+   return true;
+  }
+
+  //not 
+  r.not = function(val) {
+   return !!Boolean(val)
+  }
+
+  //nth 
+  r.nth = function(pos, list) {
+   if(pos > list.length || pos < 0) {
+    return false;
+   }
+   else {
+    return list[pos]
+   }
+  }
+
+  //nthArg 
+  r.nthArg = function(pos) {
+   return function() {
+    return arguments[pos]
+   }
   }
 
   //of 
@@ -237,6 +439,46 @@
     return result;
   }
 
+  //reduce 
+  r.reduce = function(fn, initialValue, list) {
+   var result = initialValue;
+   for(var i = 0; i < list.length; i++) {
+    result += fn(list[i])
+   }
+   return result;
+  }
+
+  //reject 
+  r.reject = function(fn, list) {
+   var result = [];
+   for(var i = 0; i < list.length; i++) {
+    if(fn(list[i]) === false) {
+     result.push(list[i])
+    }
+   }
+   return result;
+  }
+
+  //reverse 
+  r.reverse = function(list) {
+   if(list instanceof Array) {
+    return list.reverse()
+   }
+   else {
+    return list.toString().split('').reverse().join('')
+   }
+  }
+
+  //subtract 
+  r.subtract = function(a,b) {
+   return a - b 
+  }
+
+  //sum
+  r.sum = function(a,b) {
+   return a + b
+  }
+
   //tail 
   r.tail = function(list) {
     return list.slice(1)
@@ -245,6 +487,33 @@
   //take 
   r.take = function(val, list) {
     return list.slice(0, val)
+  }
+
+  //takeLast 
+  r.takeLast = function(pos, list) {
+   return list.slice(pos, list.length - 1)
+  }
+
+  //tap 
+  r.tap = function(fn, obj) {
+   fn(obj);
+   return obj;
+  }
+
+  //times 
+  r.times = function(fn, n) {
+   for(var i = 0; i < n; i++) {
+    fn(i)
+   }
+  }
+
+  //toPairs
+  r.toPairs = function(obj) {
+   var result = [];
+   for(var key in obj) {
+    result.push([key, obj[key]])
+   }
+   return result;
   }
 
   //tryCatch
@@ -257,6 +526,11 @@
         return fn1(val)
       }
     }
+  }
+
+  //true 
+  r.true = function() {
+   return true;
   }
 
   //type 
