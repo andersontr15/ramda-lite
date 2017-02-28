@@ -1,0 +1,2 @@
+# Minimalist version of Ramda 
+
