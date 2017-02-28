@@ -311,6 +311,17 @@
    return val1 <= val2 
   }
 
+  r.Maybe = function(val) {
+   var container = [];
+   try {
+    container.push(val);
+    return container;
+   }
+   catch(exception) {
+    return [exception]
+   }
+  }
+
   //map 
   r.map = function(fn, list) {
     var result = [];
@@ -505,6 +516,16 @@
    for(var i = 0; i < n; i++) {
     fn(i)
    }
+  }
+
+  //toUpper 
+  r.toUpper = function(val) {
+   return val.toUpperCase()
+  }
+
+  //toLower 
+  r.toLower = function(val) {
+   return val.toLowerCase()
   }
 
   //toPairs
