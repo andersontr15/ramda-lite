@@ -312,16 +312,16 @@
   }
   
   //maybe 
-  r.Maybe = function(val) {	
+  r.Maybe = function(val) {
     var container = [];
-	  if(val === undefined || val === null || val instanceof Error){
-		return [null]
+    if(val === undefined || val === null || val instanceof Error) {
+      return [null]
     }
-	  else {
-		container.push(val);
-		return container  
+    else {
+      container.push(val);
+      return container;
     }
-}
+  }
 
   //map 
   r.map = function(fn, list) {
