@@ -139,11 +139,11 @@
 
   // divide 
   r.divide = function(a,b) {
-    try {
-      return a / b 
+    if(a === 0) {
+      throw new Error('Divide by zero exception')
     }
-    catch(exception) {
-      throw new Error(exception)
+    else {
+      return a / b
     }
   }
 

@@ -1,11 +1,13 @@
-# Minimalist version of Ramda.js under 10kb
+# ramdaLite 
+
+## Minimalist version of Ramda.js under 10kb
 
 ### To include in project: 
 
 ```javascript
-	var ramda_lite = require('./index');
+	var ramdaLite = require('./index');
 	e.g.
-	ramda_lite.always() --> true 
+	ramdaLite.always() --> true 
 ```
 
 ### API 
@@ -36,14 +38,14 @@ add two numbers together
 ```javascript
 	var x = 5;
 	var y = 10;
-	ramda_lite.add(x,y) --> 15
+	ramdaLite.add(x,y) --> 15
 ```
 
 ### adjust 
 apply a function to a specific index in a list
 ```javascript
 	var numbers = [4,5,6]
-	ramda_lite.adjust(5, 1, numbers) --> [4,10,6]
+	ramdaLite.adjust(5, 1, numbers) --> [4,10,6]
 ```
 
 ### all 
@@ -53,17 +55,17 @@ a function that will return true if predicate is true for all values
 	var isEven = function(val) {
 		return val % 2 === 0
 	}
-	ramda_lite.all(isEven, list) --> false
+	ramdaLite.all(isEven, list) --> false
 ```
 ### always 
 a function that always returns true
 ```javascript
-	ramda_lite.always() --> true 
+	ramdaLite.always() --> true 
 ```
 ### and 
 a function that returns true if both arguments are true
 ```javascript
-	ramda_lite.and(true, false) --> false
+	ramdaLite.and(true, false) --> false
 ```
 ### ap 
 a function that applies multiple methods to a list
@@ -74,12 +76,12 @@ a function that applies multiple methods to a list
 	var add = function(x) {
 		return x + 2
 	}
-	ramda_lite.ap(multiply, add, [1,2,3]) -> [4,6,8]
+	ramdaLite.ap(multiply, add, [1,2,3]) -> [4,6,8]
 ```
 ### apply 
 a function that applies a given context to a function to be invoked
 ```javascript
-	ramda_lite.apply(console.log, 5) -> 5 
+	ramdaLite.apply(console.log, 5) -> 5 
 ```
 ### both 
 a function that returns true if both functions passed to it with the argument are truthy
@@ -90,7 +92,7 @@ a function that returns true if both functions passed to it with the argument ar
 	var greaterThanTwenty = function(value) {
 		return value > 20
 	}
-	ramda_lite.both(isEven, greaterThanTwenty, 21) -> false
+	ramdaLite.both(isEven, greaterThanTwenty, 21) -> false
 ```
 ### binary 
 a function that returns a function which only utilizes two arguments
@@ -98,7 +100,7 @@ a function that returns a function which only utilizes two arguments
 	var threeArgs = function(a,b,c) {
 		return [a,b,c]
 	}
-	var binaryArgsOnly = ramda_lite.binary(threeArgs);
+	var binaryArgsOnly = ramdaLite.binary(threeArgs);
 	binaryArgsOnly(1,2,3) --> [1,2, undefined]
 ```
 ### bind 
@@ -110,13 +112,13 @@ a function that binds the ```this``` context with the specified function and ret
 	var obj = {
 		name: 'theo'
 	}
-	var bound = ramda_lite.bind(greet, obj);
+	var bound = ramdaLite.bind(greet, obj);
 	bound() -> 'hello theo'
 ```
 ### complement 
 a function that returns a function which returns true if argument is identical to first function
 ```javascript
-	var complement = ramda_lite.complement(null);
+	var complement = ramdaLite.complement(null);
 	complement(null) -> true
 	complement(undefined) -> false 
 ```
@@ -129,14 +131,14 @@ a function that can take an infinite amount of functions and call them sequentia
 	var multiplyByTwo = function(v) {
 		return v * 2
 	}
-	var composition = ramda_lite.compose(addTwo, multiplyByTwo);
+	var composition = ramdaLite.compose(addTwo, multiplyByTwo);
 	composition(2) --> 8
 ```
 ### contains 
 a function that returns true if value is in the supplied list
 ```javascript
 	var numbers = [1,2,3,4];
-	var hasFour = ramda_lite.contains(4, numbers);
+	var hasFour = ramdaLite.contains(4, numbers);
 	hasFour --> true 
 ```
 ### defaultTo 
