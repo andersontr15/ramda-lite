@@ -10,7 +10,7 @@
 ```
 
 ### API 
-1. [addTwo](#addTwo)
+1. [addTwo](#add)
 2. [adjust](#adjust)
 3. [all](#all)
 4. [always](#always)
