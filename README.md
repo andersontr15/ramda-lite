@@ -10,20 +10,20 @@
 	ramda_lite.always() --> true 
 ```
 
-### add
+### add ( add two numbers together )
 ```javascript
 	var x = 5;
 	var y = 10;
 	ramda_lite.add(x,y) --> 15
 ```
 
-### adjust 
+### adjust (apply a function to a specific index in a list)
 ```javascript
 	var numbers = [4,5,6]
 	ramda_lite.adjust(5, 1, numbers) --> [4,10,6]
 ```
 
-### all
+### all (a function that will return true if predicate is true for all values)
 ```javascript
 	var numbers = [4,5,6]
 	var isEven = function(val) {
@@ -31,15 +31,15 @@
 	}
 	ramda_lite.all(isEven, list) --> false
 ```
-### always
+### always (a function that always returns true)
 ```javascript
 	ramda_lite.always() --> true 
 ```
-### and 
+### and (a function that returns true if both arguments are true)
 ```javascript
 	ramda_lite.and(true, false) --> false
 ```
-### ap 
+### ap (a function that applies multiple methods to a list)
 ```javascript
 	var multiply = function(x) {
 		return x * 2
@@ -49,11 +49,11 @@
 	}
 	ramda_lite.ap(multiply, add, [1,2,3]) -> [4,6,8]
 ```
-### apply 
+### apply (a function that applies a given context to a function to be invoked)
 ```javascript
 	ramda_lite.apply(console.log, 5) -> 5 
 ```
-### both 
+### both (a function that returns true if both functions passed to it with the argument are truthy)
 ```javascript
 	var isEven = function(value) {
 		return value % 2 === 0
@@ -63,7 +63,7 @@
 	}
 	ramda_lite.both(isEven, greaterThanTwenty, 21) -> false
 ```
-### binary
+### binary (a function that returns a function which only utilizes two arguments)
 ```javascript
 	var threeArgs = function(a,b,c) {
 		return [a,b,c]
@@ -75,13 +75,13 @@
 
 
 
-### complement 
+### complement (a function that returns a function which returns true if argument is identical to first function)
 ```javascript
 	var complement = ramda_lite.complemente(null);
 	complement(null) -> true
 	complement(undefined) -> false 
 ```
-### compose 
+### compose (a function that can take an infinite amount of functions and call them sequentially on a value)
 ```javascript
 	var addTwo = function(v) {
 		return v + 2 
@@ -92,7 +92,7 @@
 	var composition = ramda_lite.compose(addTwo, multiplyByTwo);
 	composition(2) --> 8
 ```
-### contains 
+### contains (a function that returns true if value is in the supplied list)
 ```javascript
 	var numbers = [1,2,3,4];
 	var hasFour = ramda_lite.contains(4, numbers);
