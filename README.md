@@ -116,7 +116,7 @@ a function that binds the ```this``` context with the specified function and ret
 ### complement 
 a function that returns a function which returns true if argument is identical to first function
 ```javascript
-	var complement = ramda_lite.complemente(null);
+	var complement = ramda_lite.complement(null);
 	complement(null) -> true
 	complement(undefined) -> false 
 ```
