@@ -1,4 +1,4 @@
-# Minimalist version of Ramda.js under 10kb 
+# Minimalist version of Ramda.js
 
 # API 
 
