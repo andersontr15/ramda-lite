@@ -102,9 +102,17 @@ a function that returns a function which only utilizes two arguments
 	binaryArgsOnly(1,2,3) --> [1,2, undefined]
 ```
 ### bind 
-
-
-
+a function that binds the ```this``` context with the specified function and returns a bound function 
+```javascript
+	var greet = function(){
+		return 'hello ' + this.name
+	}
+	var obj = {
+		name: 'theo'
+	}
+	var bound = ramda_lite.bind(greet, obj);
+	bound() -> 'hello theo'
+```
 ### complement 
 a function that returns a function which returns true if argument is identical to first function
 ```javascript
