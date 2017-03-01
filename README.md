@@ -1,4 +1,4 @@
-# Minimalist version of Ramda.js
+# Minimalist version of Ramda.js under 10kb
 
 ### To include in project: 
 
