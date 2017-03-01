@@ -143,10 +143,33 @@ a function that returns true if value is in the supplied list
 ### defaultTo 
 
 ### divide 
+a function that divides two numbers
+```javascript
+	var x = 10;
+	var y = 5;
+	var quotient = ramdaLite.divide(x,y);
+	quotient --> 2
+```
 
 ### either 
+a function that returns true if value is truthy for one of two predicate functions 
+```javascript
+	var value = 2;
+	var isOdd = function(v) {
+		return v % 3 === 0
+	}
+	var isEven = function(v) {
+		return v % 2 === 0
+	}
+	var either = ramdaLite.either(isEven, isOdd, value);
+	either --> true 
+```
 
 ### empty 
+a function that returns the JavaScript class representation of the supplied type as an empty type
+var numbers = [1,2,3,4];
+var value = ramdaLite.empty(numbers);
+value --> []
 
 ### false 
 
