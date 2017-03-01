@@ -310,17 +310,18 @@
   r.lte = function(val1, val2) {
    return val1 <= val2 
   }
-
-  r.Maybe = function(val) {
-   var container = [];
-   try {
-    container.push(val);
-    return container;
-   }
-   catch(exception) {
-    return [exception]
-   }
-  }
+  
+  //maybe 
+  r.Maybe = function(val) {	
+    var container = [];
+	if(val === undefined || val === null || val instanceof Error){
+		return [null]
+    }
+	else {
+		container.push(val);
+		return container 
+    }
+}
 
   //map 
   r.map = function(fn, list) {
