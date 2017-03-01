@@ -10,7 +10,7 @@
 	ramda_lite.always() --> true 
 ```
 
-#### add (add two numbers together )
+#### add (add two numbers together)
 ```javascript
 	var x = 5;
 	var y = 10;
