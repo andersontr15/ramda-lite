@@ -1,6 +1,6 @@
 # Minimalist version of Ramda.js
 
-#### To include in project: 
+### To include in project: 
 
 ```javascript
 	var ramda_lite = require('./index');
@@ -8,7 +8,7 @@
 	ramda_lite.always() --> true 
 ```
 
-#### API 
+### API 
 1. [add](#add)
 2. [adjust](#adjust)
 3. [all](#all)
@@ -31,7 +31,7 @@
 20. [flip](#flip)
 
 
-#### add 
+### add 
 add two numbers together
 ```javascript
 	var x = 5;
@@ -39,14 +39,14 @@ add two numbers together
 	ramda_lite.add(x,y) --> 15
 ```
 
-#### adjust 
+### adjust 
 apply a function to a specific index in a list
 ```javascript
 	var numbers = [4,5,6]
 	ramda_lite.adjust(5, 1, numbers) --> [4,10,6]
 ```
 
-#### all 
+### all 
 a function that will return true if predicate is true for all values
 ```javascript
 	var numbers = [4,5,6]
@@ -55,17 +55,17 @@ a function that will return true if predicate is true for all values
 	}
 	ramda_lite.all(isEven, list) --> false
 ```
-#### always 
+### always 
 a function that always returns true
 ```javascript
 	ramda_lite.always() --> true 
 ```
-#### and 
+### and 
 a function that returns true if both arguments are true
 ```javascript
 	ramda_lite.and(true, false) --> false
 ```
-#### ap 
+### ap 
 a function that applies multiple methods to a list
 ```javascript
 	var multiply = function(x) {
@@ -76,12 +76,12 @@ a function that applies multiple methods to a list
 	}
 	ramda_lite.ap(multiply, add, [1,2,3]) -> [4,6,8]
 ```
-#### apply 
+### apply 
 a function that applies a given context to a function to be invoked
 ```javascript
 	ramda_lite.apply(console.log, 5) -> 5 
 ```
-#### both 
+### both 
 a function that returns true if both functions passed to it with the argument are truthy
 ```javascript
 	var isEven = function(value) {
@@ -92,7 +92,7 @@ a function that returns true if both functions passed to it with the argument ar
 	}
 	ramda_lite.both(isEven, greaterThanTwenty, 21) -> false
 ```
-#### binary 
+### binary 
 a function that returns a function which only utilizes two arguments
 ```javascript
 	var threeArgs = function(a,b,c) {
@@ -101,18 +101,18 @@ a function that returns a function which only utilizes two arguments
 	var binaryArgsOnly = ramda_lite.binary(threeArgs);
 	binaryArgsOnly(1,2,3) --> [1,2, undefined]
 ```
-#### bind 
+### bind 
 
 
 
-#### complement 
+### complement 
 a function that returns a function which returns true if argument is identical to first function
 ```javascript
 	var complement = ramda_lite.complemente(null);
 	complement(null) -> true
 	complement(undefined) -> false 
 ```
-#### compose 
+### compose 
 a function that can take an infinite amount of functions and call them sequentially on a value
 ```javascript
 	var addTwo = function(v) {
@@ -124,115 +124,115 @@ a function that can take an infinite amount of functions and call them sequentia
 	var composition = ramda_lite.compose(addTwo, multiplyByTwo);
 	composition(2) --> 8
 ```
-#### contains 
+### contains 
 a function that returns true if value is in the supplied list
 ```javascript
 	var numbers = [1,2,3,4];
 	var hasFour = ramda_lite.contains(4, numbers);
 	hasFour --> true 
 ```
-#### defaultTo 
+### defaultTo 
 
-#### divide 
+### divide 
 
-#### either 
+### either 
 
-#### empty 
+### empty 
 
-#### false 
+### false 
 
-#### filter 
+### filter 
 
-#### flip 
+### flip 
 
-#### gt 
+### gt 
 
-#### gte
+### gte
 
-#### identity
+### identity
 
-#### ifElse 
+### ifElse 
 
-#### inc 
+### inc 
 
-#### is 
+### is 
 
-#### isEmpty
+### isEmpty
 
-#### it 
+### it 
 
-#### juxt 
+### juxt 
 
-#### keys 
+### keys 
 
-#### length 
+### length 
 
-#### last 
+### last 
 
-#### lte 
+### lte 
 
-#### Maybe 
+### Maybe 
 
-#### map 
+### map 
 
-#### max 
+### max 
 
-#### memoize 
+### memoize 
 
-#### min 
+### min 
 
-#### multiply 
+### multiply 
 
-#### negate 
+### negate 
 
-#### none 
+### none 
 
-#### nth
+### nth
 
-#### nthArg
+### nthArg
 
-#### of 
+### of 
 
-#### or 
+### or 
 
-#### pair 
+### pair 
 
-#### prepend 
+### prepend 
 
-#### product 
+### product 
 
-#### range 
+### range 
 
-#### reduce 
+### reduce 
 
-#### reject 
+### reject 
 
-#### reverse 
+### reverse 
 
-#### subtract 
+### subtract 
 
-#### tail 
+### tail 
 
-#### take 
+### take 
 
-#### takeLast 
+### takeLast 
 
-#### times 
+### times 
 
-#### toUpper
+### toUpper
 
-#### toLower 
+### toLower 
 
-#### toPairs
+### toPairs
 
-#### tryCatch
+### tryCatch
 
-#### true 
+### true 
 
-#### unique 
+### unique 
 
-#### values 
+### values 
 
-#### without 
+### without 
 
-#### zip 
+### zip 
