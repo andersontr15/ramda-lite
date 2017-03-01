@@ -203,6 +203,16 @@ a function that reverses argument order of functions
 	flipped(4) --> add --> multiply --> 12 
 ```
 
+### forEach 
+a function that will iterate through a list and call a function on each value in the list 
+```javascript 
+	var list = [1,2,3,4];
+	var log = function(v) {
+		console.log('value is ' + v)
+	}
+	ramdaLite.forEach(log, list) -> 'The value is 1', 'The value is 2', 'The value is 3', 'The value is 4'
+```
+
 ### gt 
 a function that returns true if the first argument is greater than the second argument 
 ```javascript 
