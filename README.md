@@ -15,7 +15,9 @@
 	var addThree = function(v) {
 		return v + 3
 	}
-	e.g. --> ramdaLite.compose(multiplyByTwo, addTwo, addThree)(2) --> 9
+	var composition = ramdaLite.compose(multiplyByTwo, addTwo, addThree);
+
+	composition(2) --> 9
 ```
 
 ### API 
