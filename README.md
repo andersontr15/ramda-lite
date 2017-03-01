@@ -10,7 +10,7 @@
 ```
 
 ### API 
-1. [addTwo](#add two)
+1. [addTwo](#add-two)
 2. [adjust](#adjust)
 3. [all](#all)
 4. [always](#always)
@@ -32,12 +32,12 @@
 20. [flip](#flip)
 
 
-### add two 
+### add-two 
 add two numbers together
 ```javascript
 	var x = 5;
 	var y = 10;
-	ramdaLite.add(x,y) --> 15
+	ramdaLite.addTwo(x,y) --> 15
 ```
 
 ### adjust 
