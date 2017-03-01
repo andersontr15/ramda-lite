@@ -70,18 +70,29 @@
 	binaryArgsOnly(1,2,3) --> [1,2, undefined]
 ```
 - bind 
-```javascript
-	var obj = {
-		name: 'theo'
-	}
-	var greet = function(name) {
-		return name;
-	}
-	var bound = ramda_lite.bind()
-```
 - complement 
+```javascript
+	var complement = ramda_lite.complemente(null);
+	complement(null) -> true
+	complement(undefined) -> false 
+```
 - compose 
+```javascript
+	var addTwo = function(v) {
+		return v + 2 
+	}
+	var multiplyByTwo = function(v) {
+		return v * 2
+	}
+	var composition = ramda_lite.compose(addTwo, multiplyByTwo);
+	composition(2) --> 8
+```
 - contains 
+```javascript
+	var numbers = [1,2,3,4];
+	var hasFour = ramda_lite.contains(4, numbers);
+	hasFour --> true 
+```
 - defaultTo 
 - divide 
 - either 
