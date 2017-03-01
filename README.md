@@ -174,28 +174,102 @@ value --> []
 ```
 
 ### false 
+a function that always returns false 
+```javascript
+	var f = ramdaLite.false();
+	f --> false; 
+```
 
 ### filter 
+a function that filters a list based of the the predicate function 
+```javascript 
+	var numbers = [1,2,3,4];
+	var filtered = ramdaLite.filter(numbers, function(v) {
+		return v % 2 === 0
+	});
+	filtered --> [2,4]
+```
 
 ### flip 
+a function that reverses argument order of functions 
+```javascript
+	var multiply = function(x) {
+		return x * 2
+	}
+	var add = function(x) {
+		return x + 2
+	}
+	var flipped = ramdaLite.flipped(multiply, add);
+	flipped(4) --> add --> multiply --> 12 
+```
 
 ### gt 
+a function that returns true if the first argument is greater than the second argument 
+```javascript 
+	var x = 5;
+	var y = 10;
+	var result = ramdaLite.gt(x,y);
+	result --> false;
+```
 
 ### gte
+a function that returns true if the first argument is greater than or equal to the second argument 
+```javascript 
+	var x = 10;
+	var y = 10;
+	var result = ramdaLite.gte(x,y);
+	result --> true 
+```
 
 ### identity
+a function that takes in a value and return the value as its self. 
+```javascript 
+	var value = 10;
+	var result = ramdaLite.identity(10);
+	result --> 10;
+```
 
 ### ifElse 
 
+
 ### inc 
+a function that will take in a value and increment it by 1 
+```javascript 
+  var result = ramdaLite.inc(5);
+  result --> 6 
+```
 
 ### is 
+a function that will return true if first argument is an instance of the second argumet (its constructor)
+```javascript 
+	var obj = {
+		name: 'theo'
+	};
+	var result = ramdaLite.is(obj, {}) --> true 
+	var falsy = ramdaLite.is(obj, []) --> false 
+```
 
 ### isEmpty
-
-### it 
-
+a function that will return true if the value is empty 
+```javascript 
+	var value = [1,2,3];
+	var value2 = [];
+	ramdaLite.isEmpty(value) -> false;
+	ramdaLite.isEmpty(value2) -> true;
+```
 ### juxt 
+a function which is invokes multiple functions on a list of values 
+```javascript 
+	var double = function(x) {
+		return x * x 
+	}
+	var addThree  = function(x) {
+		return x + 3
+	}
+	var list = [1,2,3,4];
+	var result = ramdaLite.juxt(double,triple,list);
+	result --> [4,7,12,19]
+```
 
 ### keys 
 
