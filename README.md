@@ -2,7 +2,7 @@
 
 ### Minimalist version of Ramda.js under 10kb
 
-### To include in project: 
+#### To include in project: 
 
 ```javascript
 	var ramdaLite = require('./src/ramdaLite');
