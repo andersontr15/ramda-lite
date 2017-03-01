@@ -366,10 +366,29 @@ a function that takes a list and a function to apply to each value in the list. 
 ```
 
 ### max 
+a function that takes a list and returns the maximum value
+```javascript 
+	var numbers = [2,34,100,9];
+	ramdaLite.max(numbers) --> 100
+```
 
 ### memoize 
+a function that returns a cached value of the passed in function if it has already been stored 
+```javascript 
+	var multiplyByTwo = function(v) {
+		return v * 2 
+	}
+	var memoize = ramdaLite.memoize(multiplyByTwo);
+	memoize(multiplyByTwo(2)) -> returns function from cache 
+	memoize(console.log(2)) -> adds method to cache and returns console.log(2)
+```
 
 ### min 
+a function that takes a list and returns the minimum value 
+```javascript 
+	var numbers = [1,2,3,4];
+	ramdaLite.min(numbers) --> 1 
+```
 
 ### multiply 
 
