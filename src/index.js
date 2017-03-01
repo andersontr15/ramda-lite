@@ -345,13 +345,13 @@
   //memoize 
   r.memoize = function(fn) {
     var cache = {};
-    return function() {
+    return function(args) {
       if(cache.hasOwnProperty(fn)) {
-        return cache[fn]
+        return cache[fn](args)
       }
       else {
         cache[fn] = fn;
-        return cache[fn];
+        return cache[fn](args);
       }
     }
   }
