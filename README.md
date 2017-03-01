@@ -5,7 +5,7 @@
 ### To include in project: 
 
 ```javascript
-	var ramdaLite = require('./ramdaLite');
+	var ramdaLite = require('./src/ramdaLite');
 	var multiplyByTwo = function(v) {
 		return v * 2
 	}
