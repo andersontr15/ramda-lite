@@ -20,7 +20,7 @@
 	composition(2) --> 9
 ```
 
-### API 
+## API 
 1. [addTwo](#add-two)
 2. [adjust](#adjust)
 3. [all](#all)
