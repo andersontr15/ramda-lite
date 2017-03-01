@@ -2,6 +2,8 @@
 
 # API 
 
+### To include in project: 
+
 ```javascript
 	var ramda_lite = require('./index');
 	e.g.
@@ -97,55 +99,107 @@
 	hasFour --> true 
 ```
 ### defaultTo 
+
 ### divide 
+
 ### either 
+
 ### empty 
+
 ### false 
+
 ### filter 
+
 ### flip 
-# gt 
+
+### gt 
+
 ### gte
+
 ### identity
+
 ### ifElse 
+
 ### inc 
+
 ### is 
+
 ### isEmpty
+
 ### it 
+
 ### juxt 
+
 ### keys 
+
 ### length 
+
 ### last 
+
 ### lte 
+
 ### Maybe 
+
 ### map 
+
 ### max 
+
 ### memoize 
+
 ### min 
+
 ### multiply 
+
 ### negate 
+
 ### none 
+
 ### nth
+
 ### nthArg
+
 ### of 
+
 ### or 
+
 ### pair 
+
 ### prepend 
+
 ### product 
+
 ### range 
+
 ### reduce 
+
 ### reject 
+
 ### reverse 
+
 ### subtract 
+
 ### tail 
+
 ### take 
+
 ### takeLast 
+
 ### times 
+
 ### toUpper
+
 ### toLower 
+
 ### toPairs
+
 ### tryCatch
+
 ### true 
+
 ### unique 
+
 ### values 
+
 ### without 
+
 ### zip 
