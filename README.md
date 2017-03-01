@@ -1,7 +1,5 @@
 # Minimalist version of Ramda.js
 
-# API 
-
 #### To include in project: 
 
 ```javascript
@@ -9,6 +7,29 @@
 	e.g.
 	ramda_lite.always() --> true 
 ```
+
+#### API 
+1. [add](#add)
+2. [adjust](#adjust)
+3. [all](#all)
+4. [always](#always)
+5. [and](#and)
+6. [ap](#ap)
+7. [apply](#apply)
+8. [both](#both)
+9. [binary](#binary)
+10. [bind](#bind)
+11. [complement](#complement)
+12. [compose](#compose)
+13. [contains](#contains)
+14. [defaultTo](#defaultTo)
+15. [divide](#divide)
+16. [either](#either)
+17. [empty](#empty)
+18. [false](#false)
+19. [filter](#filter)
+20. [flip](#flip)
+
 
 #### add (add two numbers together)
 ```javascript
