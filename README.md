@@ -1,13 +1,12 @@
 # ramdaLite 
 
-## Minimalist version of Ramda.js under 10kb
+### Minimalist version of Ramda.js under 10kb
 
 ### To include in project: 
 
 ```javascript
-	var ramdaLite = require('./index');
-	e.g.
-	ramdaLite.always() --> true 
+	var ramdaLite = require('./ramdaLite');
+	e.g. --> ramdaLite.always() --> true;
 ```
 
 ### API 
