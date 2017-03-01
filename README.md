@@ -293,16 +293,56 @@ a function which is invokes multiple functions on a list of values
 ```
 
 ### keys 
+a function that creates a new array from an ```Object``` with just the keys 
+```javascript 
+	var obj = {
+		name: 'theo',
+		height: 69,
+		age: 23
+	};
+	ramdaLite.keys(obj) -> ['name', 'height', 'age']
+```
 
 ### length 
+a function that returns the length of a list 
+```javascript 
+	var numbers = [1,2,3,4];
+	ramdaLite.length(numbers) --> 4
+```
 
 ### last 
+a function that returns the last element in an ```Array```
+```javascript 
+	var numbers = [1,2,3,4];
+	ramdaLite.last(numbers) --> 4;
+```
 
 ### lte 
+a function that returns true if the first argument is less than or equal to the second argument 
+```javascript 
+	var x = 5;
+	var y = 10;
+	ramdaLite.lte(5,10) --> true;
+```
 
 ### Maybe 
+a function that takes a value and wraps it an an ```Array``` container with either an error or the value 
+```javascript
+	var good = 5;
+	var bad = null;
+	ramdaLite.Maybe(good) --> [5]
+	ramdaLite.Maybe(bad) --> ['error']
+```
 
 ### map 
+a function that takes a list and a function to apply to each value in the list. returns a new ```Array```
+```javascript 
+	var numbers = [1,2,3,4];
+	var double = function(v) {
+		return v * 2
+	}
+	ramdaLite.map(numbers, double) --> [2,4,6,8];
+```
 
 ### max 
 
