@@ -167,9 +167,11 @@ a function that returns true if value is truthy for one of two predicate functio
 
 ### empty 
 a function that returns the JavaScript class representation of the supplied type as an empty type
+```javascript
 var numbers = [1,2,3,4];
 var value = ramdaLite.empty(numbers);
 value --> []
+```
 
 ### false 
 
