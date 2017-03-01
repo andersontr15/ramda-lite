@@ -283,6 +283,14 @@ a function that will return true if first argument is an instance of the second 
 	var falsy = ramdaLite.is(obj, []) --> false 
 ```
 
+### it 
+a function that returns true if the first argument is less than the second argument 
+```javascript 
+	var x = 5;
+	var y = 10;
+	ramdaLite.it(x,y) --> true
+```
+
 ### isEmpty
 a function that will return true if the value is empty 
 ```javascript 
