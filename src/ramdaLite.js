@@ -314,12 +314,12 @@
   //maybe 
   r.Maybe = function(val) {	
     var container = [];
-	if(val === undefined || val === null || val instanceof Error){
+	  if(val === undefined || val === null || val instanceof Error){
 		return [null]
     }
-	else {
+	  else {
 		container.push(val);
-		return container 
+		return container  
     }
 }
 
