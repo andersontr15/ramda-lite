@@ -70,6 +70,9 @@
 	binaryArgsOnly(1,2,3) --> [1,2, undefined]
 ```
 - bind 
+
+
+
 - complement 
 ```javascript
 	var complement = ramda_lite.complemente(null);
