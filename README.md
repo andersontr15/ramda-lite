@@ -41,7 +41,20 @@
 18. [false](#false)
 19. [filter](#filter)
 20. [flip](#flip)
-
+21. [forEach](#forEach)
+22. [gt](#gt)
+23. [gte](#gte)
+24. [has](#has)
+25. [hasIn](#hasIn)
+26. [inc](#inc)
+27. [it](#it)
+28. [juxt](#juxt)
+29. [keys](#keys)
+30. [length](#length)
+31. [last](#last)
+32. [lte](#lte)
+33. [Maybe](#Maybe)
+34. [map](#map)
 
 ### add-two 
 add two numbers together
