@@ -10,7 +10,7 @@
 ```
 
 ### API 
-1. [add](#add)
+1. [addTwo](#addTwo)
 2. [adjust](#adjust)
 3. [all](#all)
 4. [always](#always)
@@ -32,7 +32,7 @@
 20. [flip](#flip)
 
 
-### add 
+### addTwo 
 add two numbers together
 ```javascript
 	var x = 5;
