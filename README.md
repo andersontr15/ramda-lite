@@ -3,6 +3,9 @@
 # API 
 
 - add
+```
+var x = 5
+```
 - adjust 
 - all
 - always
