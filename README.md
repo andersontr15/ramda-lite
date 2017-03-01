@@ -6,7 +6,16 @@
 
 ```javascript
 	var ramdaLite = require('./ramdaLite');
-	e.g. --> ramdaLite.always() --> true;
+	var multiplyByTwo = function(v) {
+		return v * 2
+	}
+	var addTwo = function(v) {
+		return v + 2
+	}
+	var addThree = function(v) {
+		return v + 3
+	}
+	e.g. --> ramdaLite.compose(multiplyByTwo, addTwo, addThree)(2) --> 9
 ```
 
 ### API 
