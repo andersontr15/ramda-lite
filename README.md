@@ -5,19 +5,19 @@
 #### To include in project: 
 
 ```javascript
-	var ramdaLite = require('./src/ramdaLite');
-	var multiplyByTwo = function(v) {
-		return v * 2
-	}
-	var addTwo = function(v) {
-		return v + 2
-	}
-	var addThree = function(v) {
-		return v + 3
-	}
-	var composition = ramdaLite.compose(multiplyByTwo, addTwo, addThree);
+var ramdaLite = require("./src/ramdaLite");
+var multiplyByTwo = function (v) {
+  return v * 2;
+};
+var addTwo = function (v) {
+  return v + 2;
+};
+var addThree = function (v) {
+  return v + 3;
+};
+var composition = ramdaLite.compose(multiplyByTwo, addTwo, addThree);
 
-	composition(2) --> 9
+composition(2)-- > 9;
 ```
 
 ## API 
